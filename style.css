@@ -1,15 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,100&display=swap');
 
+
 body {
+
     font-family: Roboto, sans-serif;
     color: #F9FAF8;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     margin: 0;
+    justify-content: center;
 }
 
-div {}
+div,
+p {
+
+    flex: 0 1 auto;
+}
 
 ul {
     list-style-type: none;
@@ -33,9 +40,9 @@ p {
 button {
     font-family: Roboto, sans-serif;
     border-radius: 8px;
-    width: 100px;
+    width: max-content;
     border: none;
-    padding: 4px 20px;
+    padding: 4px 25px;
     background-color: #3882F6;
     color: #F9FAF8;
 }
@@ -43,38 +50,37 @@ button {
 .hero {
     background-color: #1F2937;
     display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    padding: 10px 140px 120px 80px;
-    border: 2px solid pink;
+    justify-content: center;
+}
 
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 100%;
+    margin: 20px 130px 120px 130px;
 }
 
 .hero-top {
     display: flex;
     justify-content: space-between;
-    /* width: inherit; */
-    border: 2px solid pink;
-
+    align-items: center;
 }
 
 .header-logo {
     font-size: 24px;
     color: #F9FAF8;
     font-weight: 700;
-
-}
-
-.links {
-    margin-left: auto;
 }
 
 .hero-content {
     display: flex;
     margin-top: 95px;
     gap: 50px;
-    /* justify-content: space-between; */
-
+    justify-content: center;
+   /*  align-items: center; */
+    /* max-width: 1100px; */
 }
 
 .hero-blurb {
@@ -82,7 +88,6 @@ button {
     flex-direction: column;
     width: 460px;
     gap: 8px;
-
 }
 
 .hero-main-text {
@@ -96,44 +101,38 @@ button {
     color: #E5E7EB;
 }
 
-.hero-image {}
-
-
 .info {
-    /* color: #1F2937;
-    font-size: 36px; */
     text-align: center;
-    /* font-weight: 900; */
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 40px auto 75px auto;
+    margin: 40px 80px 75px 80px;
     gap: 35px;
-    border: 1px solid green;
 }
 
-.info p {
+.info-p {
     font-size: 36px;
     font-weight: 900;
+    width: 100%;
+    max-width: 950px;
     color: #1F2937;
 }
 
 .info-squares {
     display: flex;
-    /* box-sizing: border-box; */
+    flex-wrap: wrap;
     gap: 35px;
-    border: 1px solid red;
     justify-content: center;
-    align-items: center;
-    /* align-content: center; */
+    align-items: flex-start;
 
 }
 
 .info-image {
     border: 2px solid #3882F6;
     border-radius: 12px;
+    box-sizing: border-box;
     width: inherit;
-    height: 130px;
+    height: 150px;
 }
 
 .boxes {
@@ -142,10 +141,10 @@ button {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    width: 130px;
-    /*     width: 100px; */
+    width: 150px;
+    color: #9c9ea1;
+    font-size: 18px;
     gap: 10px;
-    border: 1px solid brown;
 }
 
 .quote {
@@ -156,7 +155,7 @@ button {
 }
 
 .quote-container {
-    width: 35em;
+    width: 640px;
     margin: 80px 60px;
     color: #1F2937;
     display: flex;
@@ -168,21 +167,52 @@ button {
 .quote-content {
     font-size: 36px;
     font-style: italic;
-    font-weight: lighter;
+    font-weight: 500;
     flex-wrap: wrap;
 }
 
 .attribution {
     align-self: flex-end;
-    margin-right: 1em;
+    padding-top: 4px;
     font-size: 24px;
     font-weight: bold;
 }
 
-.blue {}
+.call {
+    display: flex;
+    justify-content: center;
+}
 
 .blue-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*  flex-wrap: wrap; */
     background-color: #3882F6;
+    border-radius: 12px;
+    margin: 6em;
+    padding: 40px 80px;
+    max-width: 650px;
+}
+
+.action-text {
+    width: 450px;
+}
+
+.lg-text {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.sm-text {
+    font-size: 90%
+}
+
+.button2 {
+    /* this button inherited attributes from the button element above */
+    border: 2px solid white;
+    height: fit-content;
+
 }
 
 .footer {
